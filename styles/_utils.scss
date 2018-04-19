@@ -1,0 +1,17 @@
+$pink: #fc575f;
+$black: #1f1f1f;
+$darkgrey: #303030;
+$mediumgrey: #3b3b3b;
+$lightgrey: #989898;
+$white: #ffffff;
+$yellow: #fcd153;
+$gradientyellow: #f5cb50;
+$green: #94d761;
+$gradientgreen: #90d15e;
+$topNavLeft: #fcfcfc;
+$topNavRight: #f7f7f7;
+
+@mixin fontSize ($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: $sizeValue/10 * 1rem;
+}

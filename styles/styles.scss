@@ -3,3 +3,108 @@
 @import "typography";
 @import "components/header";
 @import "components/footer";
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+// MISC STYLINGS
+
+.container {
+    position: relative;
+}
+.arrow-down {
+   width: 40px;
+   height: 0;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   border-top: 30px solid $yellow;
+   position: absolute;
+   right: 47.5%;
+}
+
+
+
+// .arrow-up {
+//     width: 0;
+//     height: 0;
+//     border-left
+//     border-right
+//     border-top
+// }
+
+.border-top {
+    border-top: 2px solid $mediumgrey;
+    width: 175px;
+    margin: 0 auto;
+}
+
+// MAIN STYLING BEGINS
+
+main {
+    background: $darkgrey;
+}
+
+.center {
+    text-align: center;
+    padding-top: 80px;
+    max-width: 45%;
+    margin: 0 auto;
+    & p {
+        color: $lightgrey;
+        padding-bottom: 25px;
+    }
+}
+
+.threeBoxes {
+    display: flex;
+    & img {
+        display: block;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.box-yellowBorder,
+.box-pinkBorder,
+.box-greenBorder {
+    background: $mediumgrey;
+    max-width: 33.33%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.box-pinkBorder {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+p.text {
+    color: $lightgrey;
+    @include fontSize(16);
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+}
+
+.box-yellowBorder {
+    border-bottom: 10px solid $yellow;
+}
+
+.box-pinkBorder {
+    border-bottom: 10px solid $pink;
+}
+
+.box-greenBorder {
+    border-bottom: 10px solid $green;
+}
+
+

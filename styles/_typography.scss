@@ -1,0 +1,63 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $white;
+    @include fontSize(12);
+    font-weight: 700;
+    line-height: 30px;
+}
+
+h1 {
+    @include fontSize(80);
+    color: $darkgrey;
+    line-height: 65px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 0;
+    & span {
+        color: $white;
+        font-weight: 300;
+    }
+}
+
+h2 {
+    @include fontSize(60);
+    font-weight: 300;
+    line-height: 65px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+h3 {
+    @include fontSize(24);
+    line-height: 30px;
+    text-align: center;
+}
+
+p {
+    @include fontSize(20);
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.top-nav__list-item {
+    color: $darkgrey;
+    @include fontSize(13);
+    font-weight: 300;
+    line-height: 65px;
+    text-align: right;
+    &:hover {
+        color: $pink;
+    }
+}
+
+
+
+
+
+
+
+
+

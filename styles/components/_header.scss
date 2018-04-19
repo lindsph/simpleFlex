@@ -1,0 +1,82 @@
+
+.top-nav {
+    background: linear-gradient(90deg, $topNavLeft 50%, $topNavRight 50%);
+}
+
+.intro,
+.circle-flex {
+    background: linear-gradient(90deg, $yellow 50%, $gradientyellow 50%);
+}
+
+.feature p {
+    margin-bottom: 40px;
+    text-align: left;
+    color: $darkgrey;
+}
+
+.intro .wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav__list-item {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav__list-item:not(first-of-type)::after {
+    content: "|";
+    padding: 30px;
+}
+
+.anchor--whiteBorder {
+    text-decoration: none;
+    color: $darkgrey;
+    width: 200px;
+    height: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid $white;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.5s ease;
+    &:hover {
+        border: 2px solid $darkgrey;
+    }
+}
+
+.phonePhoto {
+    position: relative;
+    top: 100px;
+    right: 75px;
+}
+
+.circle-flex {
+    display: flex;
+    text-align: center;
+    @include fontSize(14);
+    padding-top: 75px;
+    padding-bottom: 40px;
+}
+
+.circle-flex .middle {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.circle-flex i:hover {
+    color: $darkgrey;
+}
+
