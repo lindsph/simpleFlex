@@ -30,6 +30,20 @@ h2 {
     text-transform: uppercase;
 }
 
+div.quote {
+    color: $mediumgrey;
+    @include fontSize(60);
+    line-height: 55px;
+    text-align: center;
+}
+
+div.author {
+    @include fontSize(40);
+    font-weight: 300;
+    line-height: 55px;
+    text-align: center
+}
+
 h3 {
     @include fontSize(24);
     line-height: 30px;

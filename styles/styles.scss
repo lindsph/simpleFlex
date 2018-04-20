@@ -15,20 +15,35 @@ html {
 
 // MISC STYLINGS
 
+.triangleParent {
+    position: relative;
+}
+
+.arrow-down-yellow {
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+    background: linear-gradient(45deg, $yellow 50%, $gradientyellow 50%);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 48.5%;
+    bottom: -20px;
+}
+
 .container {
     position: relative;
 }
-.arrow-down {
-   width: 40px;
-   height: 0;
-   border-left: 30px solid transparent;
-   border-right: 30px solid transparent;
-   border-top: 30px solid $yellow;
-   position: absolute;
-   right: 47.5%;
+
+.arrow-down-pink {
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+    background: linear-gradient(90deg, $pink 50%, $gradientpink 50%);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 48.5%;
+    top: 70px;
 }
-
-
 
 // .arrow-up {
 //     width: 0;
@@ -46,22 +61,25 @@ html {
 
 // MAIN STYLING BEGINS
 
-main {
+// ABOUT US SECTION STYLING BEGINS
+
+section.grey {
     background: $darkgrey;
 }
 
 .center {
     text-align: center;
-    padding-top: 80px;
-    max-width: 45%;
+    padding-top: 90px;
+    max-width: 50%;
     margin: 0 auto;
     & p {
         color: $lightgrey;
-        padding-bottom: 25px;
+        padding-bottom: 30px;
     }
 }
 
 .threeBoxes {
+    margin-top: 40px;
     display: flex;
     & img {
         display: block;
@@ -80,6 +98,7 @@ main {
     padding-bottom: 50px;
     padding-right: 30px;
     padding-left: 30px;
+    margin-bottom: 100px;
 }
 
 .box-pinkBorder {
@@ -107,4 +126,106 @@ p.text {
     border-bottom: 10px solid $green;
 }
 
+// ABOUT US STYLING ENDS
 
+// SKILLS STYLING SECTION BEGINS
+
+section.black {
+    background: $black;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+    max-width: 25%;
+    margin-bottom: 90px;
+}
+
+.first,
+.second,
+.third {
+    margin-right: 40px;
+}
+
+.fourCircles {
+    margin-top: 40px;
+    display: flex;
+    & img {
+        display: block;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+// SKILLS SECTION STYLING ENDS
+
+// QUOTE SECTION STYLING BEGINS
+
+.pink {
+    background: linear-gradient(90deg, $pink 50%, $gradientpink 50%);
+    padding-bottom: 90px;
+    padding-top: 20px;
+}
+
+.quote {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.quote::before {
+    content: "“";
+    color:  #ffffff;
+    font-size: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.quote::after {
+    content: "”";
+    color:  #ffffff;
+    font-size: 140px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+// QUOTE SECTION STYLING ENDS
+
+// SCROLL SECTION STYLING BEGINS
+
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.latestProject img {
+    display: block;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+i.fas {
+    @include fontSize(30);
+}
+
+// SCROLL SECTION STYLING ENDS
+
+// HEADSHOT SECTION STYLING BEGINS
+
+.headshotBox {
+    background: $mediumgrey;
+    max-width: 25%;
+    margin-bottom: 100px;
+    border-bottom: 10px solid #fc5961;
+}
+
+
+
+
+
+// HEADSHOT SECTION STYLING ENDS

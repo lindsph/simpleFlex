@@ -9,7 +9,8 @@
 }
 
 .feature p {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    margin-top: 30px;
     text-align: left;
     color: $darkgrey;
 }
@@ -17,6 +18,7 @@
 .intro .wrapper {
     display: flex;
     align-items: center;
+    padding-top: 50px;
 }
 
 .header-flex {
@@ -30,12 +32,11 @@
 .top-nav__list-item {
     display: inline-block;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .top-nav__list-item:not(first-of-type)::after {
     content: "|";
+    color: $lightgrey;
     padding: 30px;
 }
 
@@ -59,24 +60,29 @@
 
 .phonePhoto {
     position: relative;
-    top: 100px;
+    top: 50px;
     right: 75px;
 }
 
-.circle-flex {
+.shape {
+    width: 15px;
+    height: 15px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.circle-flex .wrapper {
     display: flex;
-    text-align: center;
-    @include fontSize(14);
-    padding-top: 75px;
+    justify-content: center;
+    padding-top: 40px;
     padding-bottom: 40px;
 }
 
-.circle-flex .middle {
-    padding-right: 3px;
-    padding-left: 3px;
+div.shape.middle {
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
-.circle-flex i:hover {
-    color: $darkgrey;
-}
+
+
 
