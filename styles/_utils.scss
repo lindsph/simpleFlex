@@ -12,6 +12,13 @@ $green: #94d761;
 $gradientgreen: #90d15e;
 $topNavLeft: #fcfcfc;
 $topNavRight: #f7f7f7;
+$facebookBlue: #3B5998;
+$twitterBlue: #0084b4;
+$pinterestRed: #c8232c;
+$dribbblePink: #ea4c89;
+$flickrPink: #ff0084;
+$googleRed: #db3236;
+$linkedinBlue: #0077B5;
 
 @mixin fontSize ($sizeValue) {
     font-size: $sizeValue * 1px;

@@ -50,10 +50,15 @@ h3 {
     text-align: center;
 }
 
-p {
+h4 {
+    color: $white;
+    @include fontSize(24);
+    text-align: center;
+}
+
+p.paraRepeat {
     @include fontSize(20);
     font-weight: 300;
-    line-height: 30px;
 }
 
 .top-nav__list-item {
@@ -66,6 +71,30 @@ p {
         color: $pink;
     }
 }
+
+p.number {
+    font-family: 'Open Sans', sans-serif;
+    color: $darkgrey;
+    @include fontSize(60);
+    font-weight: 700;
+    text-align: center;
+}
+
+p.type {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    &:hover {
+        color: $pink;
+    }
+}
+
+p.title {
+    color: $darkgrey;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 
 
 
