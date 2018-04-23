@@ -20,6 +20,14 @@ h1 {
     }
 }
 
+p.emailContact {
+    font-family: 'Open Sans', sans-serif;
+    color: $darkgrey;
+    @include fontSize(60);
+    line-height: 40px;
+    text-align: center;
+}
+
 h2 {
     @include fontSize(60);
     font-weight: 300;
@@ -44,16 +52,30 @@ div.author {
     text-align: center
 }
 
-h3 {
+p.phoneNumber {
+    font-family: 'Open Sans', sans-serif;
+    @include fontSize(40);
+    line-height: 55px;
+    text-align: center;
+}
+
+h3,
+h4,
+h5 {
     @include fontSize(24);
     line-height: 30px;
     text-align: center;
 }
 
 h4 {
-    color: $white;
-    @include fontSize(24);
-    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+h5 {
+    color: $darkgrey;
+    text-align: left;
+    margin: 0;
 }
 
 p.paraRepeat {
@@ -61,7 +83,7 @@ p.paraRepeat {
     font-weight: 300;
 }
 
-.top-nav__list-item {
+.topNav .listItem {
     color: $darkgrey;
     @include fontSize(13);
     font-weight: 300;
@@ -95,8 +117,60 @@ p.title {
     text-transform: uppercase;
 }
 
+p.paraBlack {
+    color: $darkgrey;
+    @include fontSize(20);
+    font-weight: 300;
+    text-align: left;
+}
 
+p.date {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+p.blogSnippet,
+p.light,
+p.dark {
+    color: $lightgrey;
+    @include fontSize(16);
+    font-weight: 300;
+    line-height: 24px;
+}
+
+p.blogSnippet {
+    text-align: center;
+}
+
+p.light,
+p.dark {
+    text-align: left;
+}
+
+p.dark {
+    color: $darkgrey;
+}
+
+p.address {
+    font-family: 'Open Sans', sans-serif;
+    color: $darkgrey;
+    @include fontSize(25);
+    font-weight: 300;
+    line-height: 55px;
+}
+
+div.footerBlurb {
+    color: $lightgrey;
+    @include fontSize(13);
+    font-weight: 300;
+    line-height: 65px;
+    text-align: center;
+    & span {
+        color: $white;
+    }
+}
 
 
 
