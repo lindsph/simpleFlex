@@ -10,21 +10,42 @@
     <title>Project 2</title>
 </head>
 <body>
+    <label for="toggle">
+        <i class="fas fa-bars hamburger"></i>
+    </label>
     <header>
         <nav class="topNav">
+            <input type="checkbox" id="toggle" name="toggle">
+            <nav class="responsive">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- end of nav.responsive -->
             <div class="wrapper headerFlex">
                 <div class="simpleFlexLogo">
                     <img src="images/logo.png" alt="Simple Flex Logo">
                 </div>
-                <p class="burgerMenu">
-                    <i class="fas fa-bars"></i>
-                </p>
-                <ul class="topNav-list menu-show">
-                    <li class="listItem">Home</li>
-                    <li class="listItem">About</li>
-                    <li class="listItem">Portfolio</li>
-                    <li class="listItem">Blog</li>
-                    <li class="listItem">Contact</li>
+                <ul class="topNav-list">
+                    <li class="listItem">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="listItem">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="listItem">
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li class="listItem">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="listItem">
+                        <a href="#">Contact</a>
+                    </li>
                 </ul>
             </div>
             <!-- end of div.wrapper header-flex -->

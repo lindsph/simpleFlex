@@ -83,12 +83,13 @@ p.paraRepeat {
     font-weight: 300;
 }
 
-.topNav .listItem {
+ul.topNav-list a {
     color: $darkgrey;
     @include fontSize(13);
     font-weight: 300;
     line-height: 65px;
     text-align: right;
+    text-decoration: none;
     &:hover {
         color: $pink;
     }

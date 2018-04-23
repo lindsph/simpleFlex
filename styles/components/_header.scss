@@ -1,4 +1,9 @@
 
+// header {
+//     overflow: hidden;
+// }
+
+
 .topNav {
     background: linear-gradient(90deg, $topNavLeft 50%, $topNavRight 50%);
     position: fixed;
@@ -34,7 +39,7 @@
 .intro .wrapper {
     display: flex;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 150px;
 }
 
 .headerFlex {
@@ -45,9 +50,8 @@
     align-items: center;
 }
 
-.topNav .listItem {
-    display: inline-block;
-    list-style: none;
+.topNav-list {
+    display: flex;
 }
 
 .topNav .listItem:not(first-of-type)::after {
@@ -74,11 +78,11 @@
     }
 }
 
-.phonePhoto {
-    width: 50%;
+.phonePhoto img {
+    width: 100%;
     position: relative;
-    top: 75px;
-    right: 75px;
+    top: 50px;
+    right: 50px;
 }
 
 .shape {
@@ -101,7 +105,34 @@ div.shape.middle {
 }
 
 
+// RESPONSIVE/HAMBURGER MENU STYLING
 
+i.hamburger {
+    color: $darkgrey;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        color: $pink;
+    }
+}
+
+label[for="toggle"] {
+    position: fixed;
+    top: -20px;
+    left: 10px;
+    color: black;
+    z-index: 100;
+    @include fontSize(20);
+}
+
+#toggle,
+i.hamburger,
+nav.responsive {
+    display: none;
+}
+
+#toggle:checked + nav.responsive {
+    top: 100vh;
+}
 
 
 

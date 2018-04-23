@@ -13,81 +13,6 @@ html {
     margin: 0 auto;
 }
 
-// MISC STYLINGS
-
-.triangleParentOne,
-.triangleParentTwo,
-.secondYellowArrow,
-.container,
-.post {
-    position: relative;
-}
-
-.arrow-up-white {
-    width: 15px;
-    height: 15px;
-    z-index: 0;
-    background: $white;
-    transform: rotate(45deg);
-    position: absolute;
-    right: 48.5%;
-    bottom: 45px;
-}
-
-
-.arrow-down-yellow {
-    width: 40px;
-    height: 40px;
-    z-index: 0;
-    background: linear-gradient(45deg, $yellow 50%, $gradientyellow 50%);
-    transform: rotate(45deg);
-    position: absolute;
-    right: 48.5%;
-    bottom: -20px;
-}
-
-.arrow-down-yellow-two {
-    width: 40px;
-    height: 40px;
-    z-index: 0;
-    background: linear-gradient(45deg, $yellow 50%, $gradientyellow 50%);
-    transform: rotate(45deg);
-    position: absolute;
-    right: 48.5%;
-    top: 80px;
-}
-
-.arrow-down-pink {
-    width: 40px;
-    height: 40px;
-    z-index: 0;
-    background: linear-gradient(90deg, $pink 50%, $gradientpink 50%);
-    transform: rotate(45deg);
-    position: absolute;
-    right: 48.5%;
-    top: 80px;
-}
-
-.arrow-down-green {
-    width: 40px;
-    height: 40px;
-    z-index: 0;
-    background: linear-gradient(45deg, $green 50%, $gradientgreen 50%);
-    transform: rotate(45deg);
-    position: absolute;
-    right: 48.5%;
-    bottom: -20px;
-}
-
-
-.border-top {
-    border-top: 2px solid $mediumgrey;
-    width: 175px;
-    margin: 0 auto;
-}
-
-// MISC STYLING ENDS
-
 // MAIN STYLING BEGINS
 
 // ABOUT US SECTION STYLING BEGINS
@@ -393,6 +318,10 @@ img.taller {
 .post {
     max-width: 25%;
     background: $white;
+    &:hover {
+        transform: scale(1.1);
+        z-index: 10;
+    }
 }
 
 .transparentBackgroundButton {
@@ -532,6 +461,10 @@ section.yellow {
 
 div.icons.form {
     padding-top: 30px;
+    & i:hover {
+        transform: scale(1.1);
+        z-index: 10;
+    }
 }
 
 .formWrapper {
@@ -644,62 +577,186 @@ footer input[type=submit] {
 
 // FOOTER - SUMMARY SECTION STYLING ENDS
 
-// MEDIA QUERIES/BURGER MENU BEGIN
+// MISC STYLINGS
 
-.burgerMenu {
-    display: none;
+.triangleParentOne,
+.triangleParentTwo,
+.secondYellowArrow,
+.container,
+.post {
+    position: relative;
 }
 
-@media (max-width: 1210px) {
-    .simpleFlexLogo {
-        margin-top: 30px;
-    }
-
-    .top-nav {
-        background: $topNavLeft;
-    }
-    
-    .intro,
-    .circle-flex {
-        background: $yellow;
-    }
+.arrow-up-white {
+    width: 15px;
+    height: 15px;
+    z-index: 0;
+    background: $white;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 48.5%;
+    bottom: 45px;
 }
 
-@media (max-width: 950px) {
-    .phonePhoto {
+
+.arrow-down-yellow {
+    width: 40px;
+    height: 40px;
+    z-index: 50;
+    background: linear-gradient(45deg, $yellow 50%, $gradientyellow 50%);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 48.5%;
+    bottom: -20px;
+}
+
+.arrow-down-yellow-two {
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+    background: linear-gradient(45deg, $yellow 50%, $gradientyellow 50%);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 48.5%;
+    top: 80px;
+}
+
+.arrow-down-pink {
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+    background: linear-gradient(90deg, $pink 50%, $gradientpink 50%);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 48.5%;
+    top: 80px;
+}
+
+.arrow-down-green {
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+    background: linear-gradient(45deg, $green 50%, $gradientgreen 50%);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 48.5%;
+    bottom: -20px;
+}
+
+
+.border-top {
+    border-top: 2px solid $mediumgrey;
+    width: 175px;
+    margin: 0 auto;
+}
+
+// MISC STYLING ENDS
+
+
+
+// MEDIA QUERIES BEGIN
+
+@media (max-width: 1000px) {
+
+    .topNav-list {
         display: none;
     }
 
-    .feature {
-        padding-top: 100px;
-    }
-   
-    .burgerMenu {
+    i.hamburger {
         display: block;
-        font-size: 25px;
     }
-}
 
+    nav.responsive {
+        display: block;
+        background: linear-gradient(to top, #be93c5, #7bc6cc);
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        right: -300px;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        transition: top 1s;
+    }
 
-@media (max-width: 850px) {
-    .threeBoxes,
-    .fourCircles {
+    nav.responsive ul {
+        display: block;
+        list-style: none;
+        height: 70vh;
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 85px 0 0 0;
+        padding: 0;
     }
 
-    .quote::before,
-    .quote::after {
-        @include fontSize(50);
+    nav.responsive ul li {
+        margin: 0;
+        padding: 0;
     }
+
+    nav.responsive li a {
+        padding: 50px 20px 50px 30px;
+        text-decoration:none;
+        color:black;
+    }
+
 }
 
-@media (max-width: 600px) {
-    .quote::before,
-    .quote::after {
-        display: none;
-    }
-}
+
+// @media (max-width: 1210px) {
+//     .simpleFlexLogo {
+//         margin-top: 30px;
+//     }
+
+//     .top-nav {
+//         background: $topNavLeft;
+//     }
+    
+//     .intro,
+//     .circle-flex {
+//         background: $yellow;
+//     }
+// }
+
+// @media (max-width: 950px) {
+//     .phonePhoto {
+//         display: none;
+//     }
+
+//     .feature {
+//         padding-top: 100px;
+//     }
+   
+//     .burgerMenu {
+//         display: block;
+//         font-size: 25px;
+//     }
+// }
+
+
+// @media (max-width: 850px) {
+//     .threeBoxes,
+//     .fourCircles {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .quote::before,
+//     .quote::after {
+//         @include fontSize(50);
+//     }
+// }
+
+// @media (max-width: 600px) {
+//     .quote::before,
+//     .quote::after {
+//         display: none;
+//     }
+// }
 
 
 
