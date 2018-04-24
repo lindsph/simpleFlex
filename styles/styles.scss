@@ -165,9 +165,8 @@ section.bottom {
 }
 
 .latestProject img {
-    display: block;
-    margin-right: 150px;
-    margin-left: 150px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 i.fas {
@@ -457,7 +456,7 @@ section.yellow {
     margin-bottom: 0;
 }
 
-.emailContact {
+a.emailContact {
     border: 5px solid $white;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -465,6 +464,11 @@ section.yellow {
     padding-left: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        color: $white;
+        letter-spacing: 2px;
+    }
 }
 
 // EMAIL SECTION STYLING ENDS
@@ -575,6 +579,9 @@ footer input[type=text] {
     height: 50px;
     border: none;
     background: #EDEDED;
+    &:hover {
+        border: 1px solid $mediumgrey;
+    }
 }
 
 footer input[type=submit] {
@@ -708,10 +715,6 @@ footer input[type=submit] {
         margin-bottom: 25px;
     }
 
-    p.emailContact {
-        @include fontSize(50);
-    }
-
     .card1,
     .card2 {
         margin-bottom: 25px;
@@ -729,6 +732,13 @@ footer input[type=submit] {
     .three {
         border-bottom: 10px solid $green;
     }
+
+    a.emailContact {
+    border: none;
+    padding: 0;
+    }
+
+
 }
 
 // end of media query for max width 1250px
@@ -823,39 +833,142 @@ footer input[type=submit] {
         color:black;
     }
 
+    .phonePhoto,
+    .shape {
+        display: none;
+    }
+
+    h1,
+    h1 span,
+    .intro,
+    p.paraBlack {
+        text-align: center;
+    }
+
+    p.paraBlack {
+        padding-bottom: 40px;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .greenBoxes:nth-child(-n+3) {
+    margin-right: 50px;
+    }
+
 }
 
 // end of media query for max width 1000px
 
 
 
-// @media (max-width: 950px) {
-//     .phonePhoto {
-//         display: none;
-//     }
+@media (max-width: 850px) {
+    .threeBoxes,
+    .fourCircles,
+    .fourBoxes,
+    .green .wrapper,
+    .summary .wrapper,
+    .card1,
+    .card2,
+    .card3 {
+        flex-direction: column;
+        align-items: center;
+    }
 
-//     .feature {
-//         padding-top: 100px;
-//     }
-   
-// }
+    .headshotBox,
+    .box-yellowBorder,
+    .box-pinkBorder,
+    .box-greenBorder,
+    .first,
+    .second,
+    .third,
+    .fourth
+    div.greenBoxes,
+    .summaryColumn1,
+    .summaryColumn2,
+    .summaryColumn3,
+    .summaryColumn4
+     {
+        max-width: 60%;
+        margin-bottom: 25px;
+    }
+    .first,
+    .second,
+    .third {
+        margin-right: 0;
+    }
+
+    .fourth,
+    .summaryColumn1,
+    .summaryColumn2,
+    .summaryColumn3,
+    .summaryColumn4 {
+        margin-bottom: 50px;
+    }
+
+    div.greenBoxes {
+        margin-bottom: 50px;
+    }
+
+    .headshotBox:nth-child(-n+3),
+    .greenBoxes:nth-child(-n+3),
+    .summaryColumn1,
+    .summaryColumn2,
+    .summaryColumn3 {
+        margin-right: 0;
+    }
+
+    .anchor-whiteBorder {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .portfolioFlex {
+        flex-direction: column;
+    }
+
+    .post {
+        max-width: 60%;
+        margin-bottom: 25px;
+    }
+
+    .alternateDiv {
+        flex-direction: column;
+    }
+
+    .alternateTwo,
+    .alternateThree {
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .blogPosts img {
+        width: 100%;
+    }
+
+    h5 {
+        text-align: center;
+    }
+
+    p.address {
+        text-align: center;
+    }
 
 
-// @media (max-width: 850px) {
-//     .threeBoxes,
-//     .fourCircles {
-//         flex-direction: column;
-//         align-items: center;
-//     }
+}
 
-// }
+// end of media query for max-width for 850px
 
-// @media (max-width: 600px) {
-//     .quote::before,
-//     .quote::after {
-//         display: none;
-//     }
-// }
+
+
+@media (max-width: 600px) {
+    .quote::before,
+    .quote::after {
+        display: none;
+    }
+}
+
+
+// end of media query for max-width for 600px
 
 
 

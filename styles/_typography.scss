@@ -20,12 +20,14 @@ h1 {
     }
 }
 
-p.emailContact {
+a.emailContact {
     font-family: 'Open Sans', sans-serif;
     color: $darkgrey;
-    @include fontSize(60);
+    @include fontSize(50);
     line-height: 40px;
     text-align: center;
+    text-decoration: none;
+    display: block;
 }
 
 h2 {
