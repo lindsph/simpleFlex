@@ -27,9 +27,9 @@
 }
 
 .topNav-list {
+    display: flex;
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 565px;
 }
 
 .intro .wrapper {
@@ -46,15 +46,11 @@
     align-items: center;
 }
 
-.topNav-list {
-    display: flex;
-}
-
 .listItem {
     list-style: none;
 }
 
-.topNav .listItem:not(first-of-type)::after {
+.listItem:not(first-of-type)::after {
     content: "|";
     color: $lightgrey;
     padding: 30px;

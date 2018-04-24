@@ -13,16 +13,17 @@
     <label for="toggle">
         <i class="fas fa-bars hamburger"></i>
     </label>
+    <a href="#linktotop" id="target"></a>
     <header>
         <nav class="topNav">
             <input type="checkbox" id="toggle" name="toggle">
             <nav class="responsive">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#aboutUs">About</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
             <!-- end of nav.responsive -->
@@ -32,19 +33,19 @@
                 </div>
                 <ul class="topNav-list">
                     <li class="listItem">
-                        <a href="#">Home</a>
+                        <a href="index.html#home">Home</a>
                     </li>
                     <li class="listItem">
-                        <a href="#">About</a>
+                        <a href="index.html#aboutUs">About</a>
                     </li>
                     <li class="listItem">
-                        <a href="#">Portfolio</a>
+                        <a href="index.html#portfolio">Portfolio</a>
                     </li>
                     <li class="listItem">
-                        <a href="#">Blog</a>
+                        <a href="index.html#blog">Blog</a>
                     </li>
                     <li class="listItem">
-                        <a href="#">Contact</a>
+                        <a href="index.html#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -52,12 +53,12 @@
         </nav>
         <!-- end of top-nav -->
         <div class="intro">
-            <div class="wrapper">
+            <div class="wrapper" id="home">
                 <div class="feature">
                     <h1>Everything <br>
                     <span>You Need</span></h1>
                     <p class="paraBlack">Simpleflex is best solution for you, so you can present your business and services properly.</p>
-                    <a href="#" class="anchor-whiteBorder">Purchase this theme</a>
+                    <a href="index.html#contact" class="anchor-whiteBorder">Purchase this theme</a>
                 </div>
                 <!-- end of .feature div -->
                 <div class="phonePhoto">
@@ -83,7 +84,7 @@
 
     <main>
         <section class="grey">
-            <div class="center wrapper">
+            <div class="center wrapper" id="aboutUs">
                 <!-- <div class="wrapper"> -->
                 <h2>About Us</h2>
                 <p class="paraRepeat">Sanctus sea sed takimata ut vero voluptua. Stet clitakasd gubergren, no sea takimata sanctus est.</p>
@@ -265,7 +266,7 @@
        <!-- end of section.green -->
 
        <section class="grey">
-            <div class="center wrapper">
+            <div class="center wrapper" id="portfolio">
                 <h2>Our Portfolio</h2>
                 <p class="paraRepeat">Sanctus sea sed takimata ut vero voluptua. Stet clitakasd gubergren, no sea takimata sanctus est.</p>
                 <div class="border-top"></div>
@@ -281,7 +282,7 @@
             <!-- end of div.center wrapper -->
             <div class="portfolioFlex">
                 <div class="post">
-                    <img src="images/portfolio-1.png" class="taller"alt="Visual Portfolio Example 1">
+                    <img src="images/cropped-image.png" alt="Visual Portfolio Example 1">
                     <p class="title">Kopazito</p>
                     <div class="arrow-up-white"></div>
                 </div>
@@ -337,7 +338,7 @@
        <!-- end of section.grey -->
 
        <section class="black">
-            <div class="center wrapper">
+            <div class="center wrapper" id="blog">
                 <h2>Our Blog</h2>
                 <p class="paraRepeat">Latest from our blog, nam liber tempor cum soluta nobis eleifend option congue nihil.</p>
                 <div class="border-top"></div>
@@ -449,7 +450,7 @@
        <!-- end of section.map -->
 
         <section class="black">
-            <div class="center wrapper">
+            <div class="center wrapper" id="contact">
                 <h2>Get in touch</h2>
                 <p class="paraRepeat">Feel free to contact us at any time, nam liber tempor cum soluta nobis eleifend option congue nihil.</p>
                 <div class="border-top"></div>
@@ -555,10 +556,25 @@
 
         <section class="bottom">
             <div class="footerBlurb">&copy; Copyright 2014. Simpleflex Template by <span>DX Templates</span></div>
+
+            <div class="backToTop">
+                <a href="index.html#top">Top of Page</a>
+            </div>
         </section>
+
         <!-- end of section.black -->
     </footer>
     
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+    <script>
+        $(function () {
+            $('a').smoothScroll({
+                offset: -100,
+                speed: 500,
+                easing: 'swing'
+            });
+        });      
+    </script>
 </body>
 </html>

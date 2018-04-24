@@ -15,6 +15,12 @@ html {
 
 // MAIN STYLING BEGINS
 
+// SCROLLING STYLING
+
+div.backToTop {
+    text-align: center;
+}
+
 // ABOUT US SECTION STYLING BEGINS
 
 section.grey {
@@ -307,10 +313,6 @@ p.number {
 
 .post img {
     width: 100%;
-}
-
-img.taller {
-    max-height: 213px;
 }
 
 .post {
@@ -784,10 +786,6 @@ textarea:hover {
     .post {
         max-width: 40%;
         margin-bottom: 25px;
-    }
-
-    .arrow-up-white {
-        display: none;
     }
 
     .alternateTwo,
