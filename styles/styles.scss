@@ -1001,6 +1001,13 @@ textarea:hover {
     .card3 img {
         display: none;
     }
+
+    .summaryColumn1,
+    .summaryColumn2,
+    .summaryColumn3,
+    .summaryColumn4 {
+        max-width: 75%;
+    }
 }
 
 // end of media query for max-width for 850px
@@ -1025,11 +1032,7 @@ textarea:hover {
     .one,
     .two,
     .three,
-    .dual,
-    .summaryColumn1,
-    .summaryColumn2,
-    .summaryColumn3,
-    .summaryColumn4 {
+    .dual {
         max-width: 75%;
     }
 
