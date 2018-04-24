@@ -1,4 +1,5 @@
 
+
 .topNav {
     background: linear-gradient(90deg, $topNavLeft 50%, $topNavRight 50%);
     position: fixed;
@@ -47,6 +48,10 @@
 
 .topNav-list {
     display: flex;
+}
+
+.listItem {
+    list-style: none;
 }
 
 .topNav .listItem:not(first-of-type)::after {
@@ -107,6 +112,7 @@ i.hamburger {
     transition: all 0.5s ease-in-out;
     &:hover {
         color: $pink;
+        transform: rotate(90deg);
     }
 }
 
@@ -125,9 +131,7 @@ nav.responsive {
     display: none;
 }
 
-#toggle:checked + nav.responsive {
-    top: 100vh;
-}
+
 
 
 
