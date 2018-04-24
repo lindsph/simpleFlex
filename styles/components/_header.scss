@@ -31,6 +31,10 @@
     flex-basis: 565px;
 }
 
+li.listItem {
+    list-style: none;
+}
+
 .intro .wrapper {
     display: flex;
     align-items: center;
