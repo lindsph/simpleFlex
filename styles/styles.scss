@@ -946,7 +946,7 @@ textarea:hover {
     .summaryColumn3,
     .summaryColumn4
      {
-        max-width: 60%;
+        max-width: 75%;
         margin-bottom: 25px;
     }
     .first,
@@ -1007,15 +1007,41 @@ textarea:hover {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 625px) {
     .quote::before,
     .quote::after {
         display: none;
     }
+
+    .wrapper {
+        max-width: 100%;
+    }
+
+    h1 {
+        @include fontSize(60);
+    }
+
+    .post,
+    .one,
+    .two,
+    .three,
+    .dual,
+    .summaryColumn1,
+    .summaryColumn2,
+    .summaryColumn3,
+    .summaryColumn4 {
+        max-width: 75%;
+    }
+
+    section.summary {
+        background: $white;
+    }
+
 }
 
 
-// end of media query for max-width for 600px
+
+// end of media query for max-width for 625px
 
 
 
