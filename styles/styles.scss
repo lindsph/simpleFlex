@@ -13,6 +13,10 @@ html {
     margin: 0 auto;
 }
 
+.intro {
+    padding-bottom: 100px;
+}
+
 // MAIN STYLING BEGINS
 
 // SCROLLING STYLING
@@ -191,6 +195,7 @@ i.fas {
 
 .icons {
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .headshotBox {
@@ -353,98 +358,75 @@ div.buttonWrapper {
 
 // OUR BLOG SECTION STYLING BEGINS
 
-.alternateTwo,
-.alternateThree {
-    display: none;
-    max-width: 45%;
-    flex-shrink: 0;
+li {
+    list-style: none;
+}
+
+.blogPost1,
+.blogPost2,
+.blogPost3 {
+    flex-shrink: 1;
     flex-grow: 0;
-    flex-basis: 225px;
-}
-
-.altBlurbPadding {
-    padding: 20px;
-}
-
-.blogPosts {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
     & img {
-        max-width: 100%;
+        width: 100%;
+        max-height: 250px;
+        object-fit: contain;
     }
 }
 
-.one {
-    margin-right: 25px;
-    border-bottom: 10px solid $yellow;
-    flex-shrink: 1;
-    flex-grow: 0;
-}
-
-.two {
-    margin-bottom: 25px;
-    border-right: 10px solid $pink;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
-.three {
-    border-right: 10px solid $green;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
-.one,
-.dual {
-    max-width: calc(40% - 25px);
-}
-
-.two,
-.three {
-    display: flex;
-    justify-content: space-around;
-}
-
-.one,
-.two,
-.three,
-.alternateTwo,
-.alternateThree {
-    background: $mediumgrey;
-    // flex-basis: 550px;
-}
-
-.blogSnippet {
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.innerPadding {
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.two {
-    position: relative;
-}
-
-i.playButton {
-    color: $darkgrey;
-    width: 40px;
-    height: 40px;
-    background: $white;
-    border-radius: 50%;
-    position: absolute;
-    top: 30%;
-    left: 23%;
-}
-
-
-
 // OUR BLOG SECTION STYLING ENDS
+
+// SLIDER FOR BLOG POSTS
+
+.slide-wrap {
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.slide-mask {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+    
+.slide-group {
+    position: absolute; 
+    top: 0px; 
+    left: -1.25%;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    height: 100%;
+	text-align: center;
+}
+
+// NAVIGATION FOR SLIDER
+
+.slide-nav {
+    text-align: center;
+}
+
+.slide-nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.slide-nav li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: $lightgrey;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+.slide-nav li.current {
+	background: $mediumgrey;
+}
+
 
 // EMAIL SECTION STYLING BEGINS
 
@@ -476,10 +458,12 @@ a.emailContact {
 
 // MAP PHOTO STYLING
 
-.mapImage {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.map {
+    background: $black;
+}
+
+iframe {
+    width: 100%;
 }
 
 // MAP PHOTO STYLING ENDS
@@ -539,20 +523,23 @@ section.summary {
 .card2,
 .card3 {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .summaryColumn1,
 .summaryColumn2,
-.summaryColumn3,
 .summaryColumn4 {
-    max-width: 25%;
+    max-width: 50%;
+}
+
+.summaryColumn3 {
+    width: 50%;
 }
 
 .summaryColumn1,
 .summaryColumn2,
 .summaryColumn3 {
-    margin-right: 30px;
+    margin-right: 75px;
 }
 
 h5 {
@@ -564,16 +551,6 @@ p.light {
     margin: 0;
 }
 
-p.dark,
-span {
-    transition: all 0.5s ease-in-out;
-}
-
-p.dark:hover,
-span:hover {
-    color: $pink;
-    letter-spacing: 2px;
-}
 
 .imageLeft {
     margin-right: 15px;
@@ -712,7 +689,6 @@ textarea:hover {
     }
     
     .intro,
-    .circle-flex,
     .arrow-down-yellow {
         background: $yellow;
     }
@@ -751,8 +727,12 @@ textarea:hover {
     }
 
     a.emailContact {
-    border: none;
-    padding: 0;
+        border: none;
+        padding: 0;
+    }
+
+    .formWrapper {
+        max-width: 60%;
     }
 
     .green .wrapper {
@@ -772,15 +752,53 @@ textarea:hover {
     .greenBoxes:nth-child(-n+3) {
         margin-right: 0;
     }
+
+    section.summary {
+        background: $topNavRight;
+    }
+
+    h5 {
+        text-align: center;
+    }
+
+    .summaryColumn1, .summaryColumn2, .summaryColumn3 {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
 }
 
 // end of media query for max width 1250px
 
 @media (max-width: 1150px) {
 
+    .summaryColumn1 {
+        max-width: 95%;
+    }
+
+    .summaryColumn3,
+    .summaryColumn4 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .summaryColumn4 {
+        margin-top: 25px;
+            img {
+                width: 100%;
+            } 
+    }
+
+    .summaryColumn2 {
+        display: none;
+    }
+
+    footer form {
+        justify-content: center;
+    }
+
     .portfolioFlex {
-    flex-direction: column;
-    align-items: center;
+        justify-content: center;
     }
 
     .post {
@@ -788,33 +806,20 @@ textarea:hover {
         margin-bottom: 25px;
     }
 
-    .alternateTwo,
-    .alternateThree {
-        display: block;
-    }
-
-    .alternateTwo {
-        border-bottom: 10px solid $pink;
-    }
-
-    .alternateThree {
-        border-bottom: 10px solid $green;
-    }
-
-    .alternateDiv {
-        display: flex;
-        justify-content: space-between;
-    }
-
     .two,
     .three {
         display: none;
     }
+
 }
 
 // end of media query for max width 1150px
 
 @media (max-width: 1000px) {
+
+    .slide-group {
+        left: 3%;
+    }
 
     .topNav-list {
         display: none;
@@ -883,8 +888,7 @@ textarea:hover {
         color:black;
     }
 
-    .phonePhoto,
-    .shape {
+    .phonePhoto {
         display: none;
     }
 
@@ -901,20 +905,6 @@ textarea:hover {
         margin: 0 auto;
     }
 
-     .alternateDiv {
-        flex-direction: column;
-    }
-
-    .alternateTwo,
-    .alternateThree {
-        max-width: 100%;
-        margin-bottom: 25px;
-    }
-
-    .alternateDiv img {
-        display: none;
-    }
-
 }
 
 // end of media query for max width 1000px
@@ -922,18 +912,34 @@ textarea:hover {
 
 
 @media (max-width: 850px) {
-    .threeBoxes,
-    .fourCircles,
-    .fourBoxes,
-    .summary .wrapper,
-    .card1,
-    .card2,
-    .card3 {
+
+    .portfolioFlex {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    div.post {
+        max-width: 100%;
+    }
+
+    .threeBoxes {
         flex-direction: column;
         align-items: center;
     }
 
+    .fourBoxes,
+    .fourCircles {
+        flex-wrap: wrap;
+    }
+
     .headshotBox,
+    div.first,
+    div.second,
+    div.third,
+    div.fourth {
+        max-width: 45%;
+    }
+
     .box-yellowBorder,
     .box-pinkBorder,
     .box-greenBorder,
@@ -941,10 +947,6 @@ textarea:hover {
     .second,
     .third,
     .fourth
-    .summaryColumn1,
-    .summaryColumn2,
-    .summaryColumn3,
-    .summaryColumn4
      {
         max-width: 75%;
         margin-bottom: 25px;
@@ -955,19 +957,16 @@ textarea:hover {
         margin-right: 0;
     }
 
-    .fourth,
-    .summaryColumn1,
-    .summaryColumn2,
-    .summaryColumn3,
-    .summaryColumn4 {
+    .fourth {
         margin-bottom: 25px;
     }
 
     .headshotBox:nth-child(-n+3),
-    .summaryColumn1,
-    .summaryColumn2,
-    .summaryColumn3 {
-        margin-right: 0;
+    div.first,
+    div.second,
+    div.third,
+    div.fourth {
+        margin-right: 25px;
     }
 
     .anchor-whiteBorder {
@@ -1002,12 +1001,6 @@ textarea:hover {
         display: none;
     }
 
-    .summaryColumn1,
-    .summaryColumn2,
-    .summaryColumn3,
-    .summaryColumn4 {
-        max-width: 75%;
-    }
 }
 
 // end of media query for max-width for 850px
@@ -1015,6 +1008,25 @@ textarea:hover {
 
 
 @media (max-width: 625px) {
+
+    .fourBoxes,
+    .fourCircles {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .headshotBox,
+    div.first,
+    div.second,
+    div.third,
+    div.fourth {
+        max-width: 100%;
+    }
+
+    .headshotBox img {
+        width: 100%;
+    }
+
     .quote::before,
     .quote::after {
         display: none;
@@ -1038,6 +1050,10 @@ textarea:hover {
 
     section.summary {
         background: $white;
+    }
+
+    .formWrapper {
+        max-width: 90%;
     }
 
 }
